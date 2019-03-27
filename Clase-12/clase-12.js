@@ -1,4 +1,4 @@
-// Arrow functions, es asignarle a una variables una función, evitando utilizar la palabra
+// Arrow Functions, es asignarle a una variables una función, evitando utilizar la palabra
 //reservada function y utilizar los siguientes caracteres => .
 var josue = {
     nombre : 'Josué',
