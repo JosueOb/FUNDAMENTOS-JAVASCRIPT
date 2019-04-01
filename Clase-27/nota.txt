@@ -1,0 +1,15 @@
+Como funciona el asincronismo en JavaScript
+
+JavaScript sólo puede ejecutar hacer una cosa a la vez, sin embargo; es capaz de delegar la ejecución
+de funciones a otros porcesos. Este modelo de concurrencia se llama EventLoop
+
+JavaScript delega en el navegador ciertas tareas y les asocia funciones que deberán ser ejecutadas al ser completadas
+Estas funciones se llaman callback, y una vez que el navegador ha regresado con la respuesta, el callback asociado pasa 
+a la cola de tareas para su ejecución una vez que JavaScript haya terminado todas las instruciones que están en la pila
+de ejecución (callstack)
+
+Si se acumula funciones en la cola de tareas y JavaScript se encuentra ejecutando procesos  muy pesadis, el EventLoop
+quedará bloqueado y esas funciones pudieran tardar demasiado en ejecutarse.
+
+La peticiones a sevidores, las interacciones visuales, la navegacion client side, los eventos que se realizan completada 
+cierto evento, entre otros son lo que se almacena o se apila en la cola de tareas.
